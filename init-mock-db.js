@@ -52,9 +52,6 @@ let create_orgs = (count) => {
 		}
 	}
 
-	// for (let i = 0; i < orgs.length; i++) {
-	// 	for
-	// }
 	return orgs;
 };
 
@@ -75,9 +72,15 @@ const create_user = (count) => {
 	return users;
 };
 
+console.log("Generating mock data...");
+
 db.users = create_user(10);
 db.orgs = create_orgs(3);
 
 fs.writeFile("db.json", JSON.stringify(db, 0, 4).toString(), function (err) {
-	if (err) return console.log(err);
+	if (err) {
+		console.log(err);
+	} else {
+		console.log("Successfully created db.json with:\n- users: 10\n- orgs: 3");
+	}
 });
