@@ -1,0 +1,22 @@
+{
+	"name": "org-account-example",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"init-db": "node init-mock-db.js",
+		"start-db": "json-server --watch db.json --port 4001",
+		"start-app": "nodemon index.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"cors": "^2.8.5",
+		"express": "^4.17.1",
+		"express-graphql": "^0.10.0",
+		"faker": "^4.1.0",
+		"graphql": "^15.2.0",
+		"jsonwebtoken": "^8.5.1"
+	}
+}
